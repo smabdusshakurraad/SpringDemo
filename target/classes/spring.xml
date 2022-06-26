@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--This is bean config xml file for Spring to configure beans
+    we can use this, or we can use BeanConfig Annotation based configuration file
+    for Spring bean configuration
+-->
+
+<!--XML bean config for particular spring framework can be found online-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--&lt;!&ndash;    Bean configuration for a class below&ndash;&gt;-->
+<!--    <bean id="doctor" class="demo.Doctor">-->
+<!--&lt;!&ndash;        For injecting values to the constructor below&ndash;&gt;-->
+<!--        <constructor-arg value="MBBS"></constructor-arg>-->
+<!--&lt;!&ndash;        for injecting value of object ref below&ndash;&gt;-->
+<!--        <property name="nurse" ref="nurse"></property>-->
+<!--        &lt;!&ndash;        for injecting value of variable below&ndash;&gt;-->
+<!--        <property name="qualification" value="MBBS"></property>-->
+<!--    </bean>-->
+
+<!--&lt;!&ndash;    Bean configuration for nurse class below&ndash;&gt;-->
+<!--    <bean id="nurse" class="demo.Nurse"></bean>-->
+
+<!--    Where to search components need to define below -->
+    <context:component-scan base-package="demo"></context:component-scan>
+</beans>
