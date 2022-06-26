@@ -11,12 +11,13 @@ public class Main {
         // Below way to use xml file as configuration
 //        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
-        ApplicationContext context
-                = new AnnotationConfigApplicationContext(BeanConfig.class);
+        ApplicationContext context;
+        context = new AnnotationConfigApplicationContext(BeanConfig.class);
         Doctor staff = context.getBean(Doctor.class);
         staff.assist();
         staff.setQualification("FCPS");
         System.out.println(staff);
+
 
         // For singleton, we get everytime same bean/object
         // For prototype every time we get a new object
